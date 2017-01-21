@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+<meta charset="utf-8">
+	<title>Comentarios</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js">
+	</script>
+	<script src="controller.js"></script>
+
+
+</head>
+<body ng-controller="MyController" style="background: #e2e2e2;">
+
+
+
+<h3>Comentarios</h3>
+<ul >
+	<li ng-repeat="comentario in comentarios">
+	{{comentario.comentario}} - <strong style="color: #3b5998;">{{comentario.username}}</strong>
+
+
+	</li>
+
+</ul>
+
+
+<input type="text" ng-model="newComen.username" placeholder="UserName">
+<br>
+
+<br>
+<textarea name="name" rows="8" ng-model="newComen.comentario" cols="80" placeholder="Comentario"></textarea>
+<br>
+<button ng-click = "addComentario()" style="background: #3b5998; color: white; ">Agregar Comentario</button>
+
+
+
+
+
+</body>
+</html>
